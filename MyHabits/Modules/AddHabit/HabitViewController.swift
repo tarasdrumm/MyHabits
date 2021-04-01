@@ -9,6 +9,7 @@ import UIKit
 
 protocol HabitViewControllerDelegate: AnyObject {
     func didDeleteHabit()
+    func didUpdateHabit()
 }
 
 enum HabitViewControllerMode {
@@ -142,7 +143,6 @@ final class HabitViewController: UIViewController {
         setupObservers()
         setupSubviews()
         setupControllerMode()
-        timePickerValueChanged()
     }
     
     override func viewDidLayoutSubviews() {
@@ -169,7 +169,7 @@ final class HabitViewController: UIViewController {
     
     private func setupNavigationBar() {
        
-        title = "Создать"
+        title = "Править"
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(
             title: "Отменить",
@@ -194,7 +194,7 @@ final class HabitViewController: UIViewController {
         )
         titleTextField.addTarget(
             self,
-            action: #selector(textfieldEdittingChanged),
+            action: #selector(textFieldEditingChanged),
             for: .editingChanged
         )
         
@@ -271,7 +271,7 @@ final class HabitViewController: UIViewController {
             
             setupHabit(habit: habit)
             
-            // 2) добавили кнопку удалить
+            // 2) Добавил кнопку удалить
             
             view.addSubview(deleteButton)
             NSLayoutConstraint.activate(
@@ -333,9 +333,9 @@ final class HabitViewController: UIViewController {
         scrollView.verticalScrollIndicatorInsets = .zero
     }
     
-    // Textfield
+    // TextField
     
-    @objc private func textfieldEdittingChanged() {
+    @objc private func textFieldEditingChanged() {
         habitTitle = titleTextField.text
     }
     
@@ -379,6 +379,7 @@ final class HabitViewController: UIViewController {
             editingHabit.name = habitTitle
             editingHabit.date = habitDate
             
+            self.delegate?.didUpdateHabit()
             NotificationCenter.default.post(Notification(name: HabitsStore.didUpdateNotificationName))
         }
         dismiss(animated: true, completion: nil)
@@ -417,6 +418,7 @@ final class HabitViewController: UIViewController {
     @objc private func selectColorButtonTapped() {
         let colorPickerViewController = UIColorPickerViewController()
         colorPickerViewController.delegate = self
+        colorPickerViewController.selectedColor = habitColor
         present(colorPickerViewController, animated: true, completion: nil)
     }
 }

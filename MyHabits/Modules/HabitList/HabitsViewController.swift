@@ -48,7 +48,8 @@ class HabitsViewController: UIViewController {
     private func setupNavigationBar() {
         
         navigationController?.navigationBar.isHidden = false
-        title = "Сегодня"
+        title = "Привычки"
+        self.navigationItem.title = "Сегодня"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
     }
@@ -58,27 +59,15 @@ class HabitsViewController: UIViewController {
         view.addSubview(collectionView)
         
         let constraints = [
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ]
         
         NSLayoutConstraint.activate(constraints)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard
-            segue.identifier == HabitViewController.className,
-            let navigationController = segue.destination as? UINavigationController,
-            let destinationController = navigationController.children.first as? HabitViewController
-        else {
-            return
-        }
         
-        destinationController.mode = .create
-    }
-    
     // MARK: Actions
     
     @objc private func didHandleStoreUpdatedNotification() {

@@ -1,7 +1,7 @@
 //
 //  HabitDetailsViewController.swift
 //  MyHabits
-//1
+//
 //  Created by Тарас Андреев on 14.03.2021.
 //
 
@@ -107,14 +107,9 @@ extension HabitDetailsViewController: UITableViewDataSource {
         
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return "АКТИВНОСТЬ"
-        default:
-            return nil
-        }
+        return "АКТИВНОСТЬ"
     }
 }
 
@@ -122,5 +117,7 @@ extension HabitDetailsViewController: HabitViewControllerDelegate {
     func didDeleteHabit() {
         navigationController?.popToRootViewController(animated: true)
     }
+    func didUpdateHabit() {
+        navigationItem.title = habit.name  }
 }
 

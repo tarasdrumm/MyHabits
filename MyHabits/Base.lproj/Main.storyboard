@@ -109,7 +109,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XEj-o5-7e6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Привычки" image="habits_tab_icon" selectedImage="habits_tab_icon" id="F1F-hJ-9n0">
-                        <color key="badgeColor" red="0.38431372549019605" green="0.21176470588235294" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="badgeColor" red="0.63137254899999995" green="0.21176470589999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ddD-qU-sOc">

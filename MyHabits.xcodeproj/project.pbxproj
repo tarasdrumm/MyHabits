@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2666CB31260F35AE0028C83B /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2666CB30260F35AE0028C83B /* DateHelper.swift */; };
 		267029E325FE8726007D1286 /* HabitDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267029E225FE8726007D1286 /* HabitDetailsViewController.swift */; };
 		267029E625FFD57A007D1286 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267029E525FFD57A007D1286 /* Configurable.swift */; };
 		269A4B6325D92ED300034632 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269A4B6225D92ED300034632 /* AppDelegate.swift */; };
@@ -22,10 +23,10 @@
 		26CAF9CC25F3F91A0076029C /* HabitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAF9CB25F3F91A0076029C /* HabitCollectionViewCell.swift */; };
 		26CAF9CF25F3F9DE0076029C /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAF9CE25F3F9DE0076029C /* NSObject+ClassName.swift */; };
 		26CAF9D225F3FBC40076029C /* UICollectionView+ScrollDirectionInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CAF9D125F3FBC40076029C /* UICollectionView+ScrollDirectionInit.swift */; };
-		8E4DCC962607A3D800D237AE /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4DCC952607A3D800D237AE /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2666CB30260F35AE0028C83B /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		267029E225FE8726007D1286 /* HabitDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailsViewController.swift; sourceTree = "<group>"; };
 		267029E525FFD57A007D1286 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		269A4B5F25D92ED300034632 /* MyHabits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHabits.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,7 +44,6 @@
 		26CAF9CB25F3F91A0076029C /* HabitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCollectionViewCell.swift; sourceTree = "<group>"; };
 		26CAF9CE25F3F9DE0076029C /* NSObject+ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
 		26CAF9D125F3FBC40076029C /* UICollectionView+ScrollDirectionInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ScrollDirectionInit.swift"; sourceTree = "<group>"; };
-		8E4DCC952607A3D800D237AE /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				269A4B7825D9542B00034632 /* HabitsStore.swift */,
-				8E4DCC952607A3D800D237AE /* DateHelper.swift */,
+				2666CB30260F35AE0028C83B /* DateHelper.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -255,7 +255,7 @@
 				269A4B6325D92ED300034632 /* AppDelegate.swift in Sources */,
 				267029E625FFD57A007D1286 /* Configurable.swift in Sources */,
 				269A4B7C25DD292700034632 /* HabitsViewController.swift in Sources */,
-				8E4DCC962607A3D800D237AE /* DateHelper.swift in Sources */,
+				2666CB31260F35AE0028C83B /* DateHelper.swift in Sources */,
 				269A4B7F25DD294400034632 /* InfoViewController.swift in Sources */,
 				26CAF9CF25F3F9DE0076029C /* NSObject+ClassName.swift in Sources */,
 				26CAF9C925F3F8C40076029C /* ProgressCollectionViewCell.swift in Sources */,

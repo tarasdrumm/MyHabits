@@ -2,7 +2,7 @@
 //  DateHelper.swift
 //  MyHabits
 //
-//  Created by Loginov Anton on 21.03.2021.
+//  Created by Тарас Андреев on 27.03.2021.
 //
 
 import Foundation
